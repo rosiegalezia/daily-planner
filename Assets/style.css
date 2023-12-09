@@ -19,7 +19,16 @@ header {
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
-  padding: 60px;
+  /* margin: 20px; */
+  padding: 30px;
+}
+
+.container {
+  padding: 30px;
+}
+
+.blockElement {
+  padding: 20px
 }
 
 .description {
