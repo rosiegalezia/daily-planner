@@ -2,11 +2,11 @@
 <p class="lead">A simple calendar app for scheduling your work day</p>
 <p id="currentDay" class="lead"></p> */}
 
-var title = document.getElementsByClassName(".display-3")
-// var currentDay = document.querySelector("#currentDay")
-// var currentTime = document.getElementById("#currentTime")
+var title = $(".display-3")
 
-var textArea = document.getElementsByClassName(".textArea")
+var textArea = $(".textArea")
+
+// var block910 = $("#block1")
 
 // count the number of blocks
 let blockCount = container.childElementCount;
@@ -23,27 +23,49 @@ var hourFive = dayjs("13:00:01")
 var // Sets timer to check time every second
 time = setInterval(function() {
 
-// make currentDay display the date and time
-// referesh every ??? so it's up to date
+// make currentDay display the date
 var today = dayjs().format("dddd D MMM YYYY")
-console.log(today)
+// console.log(today)
 $("#currentDay").text(today)
 
+// make currentTime display the time
 var time = dayjs().format("HH:mm:ss");
 $("#currentTime").text(time)
 
 }, 1000)
 
-// loop through all the blocks
-for (var i=0; i < blockCount; i++){
-
-}
+// // loop through all the blocks
+// for (var i=0; i < blockCount; i++){
+// }
 
 
 // have timeblock colors correspond to past, present, future
-    // get current time hour via dayjs
-    // loop over all the timeblocks, conditionally assign past present or future class (see css) by comparing that timeblock's hour to the current hour
 
+    // loop over all the timeblocks, conditionally assign past present or future class (see css) by comparing that timeblock's hour to the current hour
+// loop through all the blocks
+
+// get the current time (hour block) via dayjs
+var currentHour = dayjs().format("HH")
+console.log(currentHour)
+
+if (9 < currentHour < 10){
+    $("#block1").addClass("present")
+} else
+
+if (10 < currentHour < 11){
+    $("#block1").addClass("past")
+    $("#block2").addClass("present")
+} else
+
+if (11 < currentHour < 12){
+    $("#block1 block2").addClass("past")
+    $("#block3").addClass("present")
+} else
+
+
+for (var i=0; i < blockCount; i++){
+
+}
 
  
  //saving timeblock text in local storage
