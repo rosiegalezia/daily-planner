@@ -37,35 +37,47 @@ $("#currentTime").text(time)
 // // loop through all the blocks
 // for (var i=0; i < blockCount; i++){
 // }
+// ------------------------------------------------
 
-
-// have timeblock colors correspond to past, present, future
-
-    // loop over all the timeblocks, conditionally assign past present or future class (see css) by comparing that timeblock's hour to the current hour
-// loop through all the blocks
+// set all the timeblocks to future by default
+$(".time-block").addClass("future")
 
 // get the current time (hour block) via dayjs
 var currentHour = dayjs().format("HH")
 console.log(currentHour)
 
+// // manipulating currentHour for testing
+// var currentHour = 10
+
+//loop through all the blocks
+
+for (var i=0; i < blockCount; i++){
+
 if (9 < currentHour < 10){
-    $("#block1").addClass("present")
+    $("#block1").removeClass("future").addClass("present")
 } else
 
 if (10 < currentHour < 11){
     $("#block1").addClass("past")
-    $("#block2").addClass("present")
+    $("#block2").removeClass("future").addClass("present")
 } else
 
 if (11 < currentHour < 12){
     $("#block1 block2").addClass("past")
-    $("#block3").addClass("present")
+    $("#block3").removeClass("future").addClass("present")
 } else
 
+if (12 < currentHour < 13){
+    $("#block1 block2 block3").addClass("past")
+    $("#block4").removeClass("future").addClass("present")
+} else
 
-for (var i=0; i < blockCount; i++){
-
+if (13 < currentHour < 14){
+    $("#block1 block2 block3 block4").addClass("past")
+    $("#block5").removeClass("future").addClass("present")
 }
+}
+
 
  
  //saving timeblock text in local storage
