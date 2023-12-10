@@ -27,9 +27,9 @@ header {
   padding: 30px;
 }
 
-.blockElement {
+/* .blockElement {
   padding: 20px
-}
+} */
 
 .description {
   white-space: pre-wrap;
@@ -37,19 +37,30 @@ header {
 
 .time-block {
   text-align: center;
-  border-radius: 15px;
+  /* border-radius: 15px; */
+  padding: 45px;
+  /* display: flex;
+  justify-content: center; */
+}
+
+.blockElement {
+  /* background-color: #d3d3d3; */
 }
 
 .row {
   white-space: pre-wrap;
   height: 80px;
+  /* border-radius: 15px; */
   border-top: 1px solid white;
 }
 
 .hour {
-  background-color: #ffffff;
+  background-color: #F8F8F8;
   color: #000000;
-  border-top: 1px dashed #000000;
+  /* border-top: 2px dotted #000000; */
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  vertical-align: middle;
 }
 
 .past {
@@ -58,20 +69,20 @@ header {
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #F9ACC2;
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #C8EFE5;
   color: white;
 }
 
 .saveBtn {
-  border-left: 1px solid black;
+  /* border-left: 1px solid black; */
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06aed5;
+  background-color: #BEC0C0;
   color: white;
 }
 

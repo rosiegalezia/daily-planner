@@ -3,7 +3,7 @@
 <p id="currentDay" class="lead"></p> */}
 
 var title = document.getElementsByClassName(".display-3")
-var currentDay = document.getElementById("#currentDay")
+var currentDay = document.querySelector("#currentDay")
 var currentTime = document.getElementById("#currentTime")
 
 var container = document.getElementById("#container")
@@ -11,7 +11,15 @@ var blockElements = container.children
 var textArea = document.getElementsByClassName(".textArea")
 
 // make currentDay display the date and time
-currentDay.textContent = dayjs()
+
+var today = dayjs().format("dddd Do MM")
+console.log(today)
+// currentDay.text(today)
+
+// var time = dayjs().format("H:mm:ss");
+// $("#currentTime").text(time)
+
+
 
 // loop through all the blocks
 for (var i=0; i<blockElements.length; i++){
