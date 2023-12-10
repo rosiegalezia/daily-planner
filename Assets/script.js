@@ -3,28 +3,29 @@
 <p id="currentDay" class="lead"></p> */}
 
 var title = document.getElementsByClassName(".display-3")
-var currentDay = document.querySelector("#currentDay")
-var currentTime = document.getElementById("#currentTime")
+// var currentDay = document.querySelector("#currentDay")
+// var currentTime = document.getElementById("#currentTime")
 
 var container = document.getElementById("#container")
-var blockElements = container.children
+// var blockElements = container.children
 var textArea = document.getElementsByClassName(".textArea")
 
 // make currentDay display the date and time
+// referesh every ??? so it's up to date
 
-var today = dayjs().format("dddd Do MM")
+var today = dayjs().format("dddd D MMM YYYY")
 console.log(today)
-// currentDay.text(today)
+$("#currentDay").text(today)
 
-// var time = dayjs().format("H:mm:ss");
-// $("#currentTime").text(time)
+var time = dayjs().format("H:mm:ss");
+$("#currentTime").text(time)
 
 
 
-// loop through all the blocks
-for (var i=0; i<blockElements.length; i++){
+// // loop through all the blocks
+// for (var i=0; i<blockElements.length; i++){
 
-}
+// }
 
 
 
