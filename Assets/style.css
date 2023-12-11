@@ -50,9 +50,9 @@ header {
   justify-content: center; */
 }
 
-.blockElement {
+/* .blockElement { */
   /* background-color: #d3d3d3; */
-}
+/* } */
 
 .row {
   white-space: pre-wrap;
@@ -79,14 +79,14 @@ header {
   border-radius: 15px;
 }
 
-.present {
-  background-color: #F9ACC2;
+.future {
+  background-color: #C8EFE5;
   color: white;
   border-radius: 15px;
 }
 
-.future {
-  background-color: #C8EFE5;
+.present {
+  background-color: #F9ACC2;
   color: white;
   border-radius: 15px;
 }

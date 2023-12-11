@@ -34,7 +34,7 @@ var // Sets timer to check time every second
 // console.log(currentHour)
 
 // // manipulating currentHour for testing
-var currentHour = 9
+var currentHour = 11
 
 //loop through all the blocks
 
@@ -42,20 +42,20 @@ var currentHour = 9
 
 for (var i = 0; i < blockCount; i++) {
     if (currentHour === 9) {
-        $("#block1").removeClass().addClass("present")
+        $("#block1").removeClass("past future").addClass("present")
     } else
         if (currentHour === 10) {
-            $("#block1").addClass("past")
-            $("#block2").removeClass("future").addClass("present")
+            $("#block1").removeClass("present").addClass("past")
+            $("#block2").removeClass("past future").addClass("present")
         }
 
             if (currentHour === 11) {
-                $("#block1 block2").addClass("past")
-                $("#block3").removeClass("future").addClass("present")
+                $("#block2").removeClass("present").addClass("past")
+                $("#block3").removeClass("past future").addClass("present")
             }
-        else
-        //set all the timeblocks to future by default
-        $(".time-block").removeClass("present past").addClass("future")
+        // else
+        // //set all the timeblocks to future by default
+        // $(".time-block").removeClass("present past").addClass("future")
 }
 
 // -----------------------------------------------
