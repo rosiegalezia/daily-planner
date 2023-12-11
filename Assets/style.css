@@ -93,7 +93,7 @@ header {
 
 .saveBtn {
   /* border-left: 1px solid black; */
-  font-size: 40px;
+  font-size: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,7 +108,7 @@ header {
 .saveBtn i:hover {
 
   height: 80px;
-  font-size: 40px;
+  font-size: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
