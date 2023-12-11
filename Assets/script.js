@@ -40,6 +40,9 @@ var currentHour = 11
 
 // while (8 < currentHour < 19){}
 
+// //set all the timeblocks to future by default
+$(".time-block").addClass("future")
+
 for (var i = 0; i < blockCount; i++) {
     if (currentHour === 9) {
         $("#block1").removeClass("past future").addClass("present")
@@ -47,15 +50,12 @@ for (var i = 0; i < blockCount; i++) {
         if (currentHour === 10) {
             $("#block1").removeClass("present").addClass("past")
             $("#block2").removeClass("past future").addClass("present")
-        }
-
+        } else
             if (currentHour === 11) {
-                $("#block2").removeClass("present").addClass("past")
+                $("#block1 block2").removeClass("present").addClass("past")
                 $("#block3").removeClass("past future").addClass("present")
             }
-        // else
-        // //set all the timeblocks to future by default
-        // $(".time-block").removeClass("present past").addClass("future")
+
 }
 
 // -----------------------------------------------
