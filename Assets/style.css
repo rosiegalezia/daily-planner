@@ -23,21 +23,13 @@ header {
   padding: 30px;
 }
 
-.container {
-  padding: 30px;
-}
-
-/* .blockElement {
-  padding: 20px
-} */
-
 .description {
   white-space: pre-wrap;
 }
 
 .container {
-  padding: 20px;
-  margin: 20px;
+  padding: 40px;
+  /* margin: 20px; */
 }
 
 .time-block {
@@ -106,7 +98,6 @@ header {
 }
 
 .saveBtn i:hover {
-
   height: 80px;
   font-size: 35px;
   display: flex;

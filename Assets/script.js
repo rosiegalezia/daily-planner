@@ -38,10 +38,6 @@ var currentHour = 12
 
 //loop through all the blocks
 
-// while (8 < currentHour < 19){}
-
-
-
 for (var i = 0; i < blockCount; i++) {
 
     // set all the timeblocks to future by default
@@ -75,21 +71,22 @@ for (var i = 0; i < blockCount; i++) {
 // var block1content = block1.val()
 var block2 = $("#block2.textArea")
 
+
 // loop over all the timeblocks and get the current value of the textarea
 // decide how you want to store the text for each hour in local storage
 // can either store each individual hour as its own key 
 // (e.g. in local storage, hour-9: "something")
 
-$(".saveBtn").on("click", setBlockContent())
+// $(".saveBtn").on("click", setBlockContent())
 
-// set timeblock content
-function setBlockContent() {
-    // var block1 = $("#block1")
-    // var block1content = block1.textArea
-    // var block1contentpleasework = block1content.val()
-    // // localStorage.setItem("block1", block1content)
-    // console.log(block1contentpleasework)
-}
+// // set timeblock content
+// function setBlockContent() {
+//     // var block1 = $("#block1")
+//     // var block1content = block1.textArea
+//     // var block1contentpleasework = block1content.val()
+//     // // localStorage.setItem("block1", block1content)
+//     // console.log(block1contentpleasework)
+// }
 
 // // retrieve the save values from local storage and display them inside each timeblock whenever the page reloads
 // // if you stored as individual keys, get each hour value from local storage and display in the corresponding textarea
