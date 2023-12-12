@@ -61,9 +61,27 @@ for (var i = 0; i < blockCount; i++) {
 }
 
 // -----------------------------------------------
-//saving timeblock text in local storage
-var blockArray = []
-$("")
+// saving timeblock text in local storage
+
+var saveBtn = $(".saveBtn")
+
+saveBtn.on("click", saveContent)
+
+function saveContent() {
+    console.log($(this).siblings(".textArea").val())
+
+
+    // 'this' refers to the element that called the function (i.e. save button)
+    // being applied to all the save buttons
+    // but the console.log will refer to the specific button I clicked
+
+// var text = // use 'this'
+// var key = // block 1
+// then save both to local storage using .setItem
+}
+
+// then access it from local storage
+
 
 
 // loop over all the timeblocks and get the current value of the textarea
