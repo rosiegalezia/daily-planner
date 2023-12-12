@@ -13,31 +13,30 @@ console.log(blockCount)
 // do i need an array of blocks????????
 
 
-var // Sets timer to check time every second
-    time = setInterval(function () {
+// var // Sets timer to check time every second
+time = setInterval(function () {
 
-        // make currentDay display the date
-        var today = dayjs().format("dddd D MMM YYYY")
-        // console.log(today)
-        $("#currentDay").text(today)
+    // make currentDay display the date
+    var today = dayjs().format("dddd D MMM YYYY")
+    // console.log(today)
+    $("#currentDay").text(today)
 
-        // make currentTime display the time
-        var time = dayjs().format("HH:mm:ss");
-        $("#currentTime").text(time)
+    // make currentTime display the time
+    var time = dayjs().format("HH:mm:ss");
+    $("#currentTime").text(time)
 
-    }, 1000)
+}, 1000)
 
 
-
-// // get the current time (hour block) via dayjs
-// var currentHour = dayjs().format("HH")
-// console.log(currentHour)
+// WHY DOES THIS NOT WORK????????????????
+// get the current time (hour block) via dayjs
+var currentHour = dayjs().format("H")
+console.log(currentHour)
 
 // // manipulating currentHour for testing
-var currentHour = 12
+// var currentHour = 9
 
 //loop through all the blocks
-
 for (var i = 0; i < blockCount; i++) {
 
     // set all the timeblocks to future by default
@@ -67,12 +66,23 @@ for (var i = 0; i < blockCount; i++) {
 // -----------------------------------------------
 //saving timeblock text in local storage
 
+for (var i = 0; i < blockCount; i++) {
+
+var timeblocks = $(".time-block")
+var textAreas = $(".textArea")
+var textAreasArray = Array.from(textAreas.val())
+
+console.log(textAreasArray)
+}
+
+
 // var block1 = $("#block1.textArea")
-// var block1content = block1.val()
-var block2 = $("#block2.textArea")
+// // var block1content = block1.val()
+// var block2 = $("#block2.textArea")
 
 
 // loop over all the timeblocks and get the current value of the textarea
+
 // decide how you want to store the text for each hour in local storage
 // can either store each individual hour as its own key 
 // (e.g. in local storage, hour-9: "something")
@@ -85,13 +95,12 @@ var block2 = $("#block2.textArea")
 //     // var block1content = block1.textArea
 //     // var block1contentpleasework = block1content.val()
 //     // // localStorage.setItem("block1", block1content)
-//     // console.log(block1contentpleasework)
 // }
 
-// // retrieve the save values from local storage and display them inside each timeblock whenever the page reloads
-// // if you stored as individual keys, get each hour value from local storage and display in the corresponding textarea
+// retrieve the save values from local storage and display them inside each timeblock when page reloads
+// if stored as individual keys, get each hour value from local storage and display in the corresponding textarea
 
-// // get timeblock content
+// get timeblock content
 // function getBlockContent() {
 //     var block1content = JSON.parse(localStorage.getItem("block1"))
 // }
