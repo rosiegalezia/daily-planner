@@ -75,8 +75,13 @@ function saveContent() {
     // being applied to all the save buttons
     // but the console.log will refer to the specific button I clicked
 
-// var text = // use 'this'
-// var key = // block 1
+    // get the content for the block
+    var text = $(this).siblings(".textArea").val()
+    // ID of the parent block, access via jquery attribute method
+    var key = $(this).parent().attr("id")
+
+    localStorage.setItem(key, text)
+    console.log(localStorage)
 // then save both to local storage using .setItem
 }
 
