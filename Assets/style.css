@@ -28,6 +28,7 @@ header {
 
 .container {
   padding: 40px;
+  margin: 0 auto;
 }
 
 .time-block {
@@ -44,10 +45,10 @@ header {
 }
 
 .hour {
-  background-color: #F8F8F8;
+  background-color: white;
+  opacity: 80%;
   color: #000000;
   height: 80px;
-  /* border-top: 2px dotted #000000; */
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   display: flex;
@@ -73,25 +74,25 @@ header {
   border-radius: 15px;
 }
 
-.resetBtn {
-  font-size: 15px;
-  display: flexbox;
-  justify-content: center;
-  /* align-items: center; */
-  border-radius: 8px;
-  color: white;
-  background-color: black;
-  opacity: 30%;
-  border: 0px;
-  padding: 10px;
-  margin: 5px;
+.reset {
+  display: flex;
+  justify-content: flex-end;
 }
 
-.resetBtn i:hover {
+.resetBtn {
+  white-space: pre-wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+
+  box-sizing: border-box;
+
+  background-color: #a4a4a4;
   color: white;
-  background-color: black;
-  opacity: 20%;
-  transition: all 0.3s ease-in-out;
+
+  padding: 10px;
+  border-radius: 8px;
+
 }
 
 .saveBtn {

@@ -1,4 +1,5 @@
 # daily-planner
+
 A daily planner created for the Week 7 challenge.
 
 ## Description
@@ -18,18 +19,21 @@ JQuery is used to streamline the javascript and add additional functionality, an
 
 *Change the current working directory to the desired location for the cloned directory using the cd command
 
-*Use the command git clone followed by the url https://github.com/rosiegalezia/daily-planner.gitand press enter to clone locally
+*Use the command git clone followed by the url https://github.com/rosiegalezia/daily-planner.git and press enter to clone locally
 
 ## Usage
 
 The deployed site is available at: https://rosiegalezia.github.io/daily-planner/
 
-A screenshot of the site and its console log can be seen below:
-![alt text](./starter/assets/images/Screenshot.png)
+A screenshot of the site and the local storage can be seen below:
+
+![Planner site with local memory on the right-hand-side](../daily-planner/Assets/images/Screenshot-1.png)
+
+![Full page screenshot of planner site](../daily-planner/Assets/images/Screenshot-2.png)
 
 ## Credits
 
-Help was received from tutors Benicio Lopez, Nirav Venkatesan and Mark Utsby.
+Help was received from tutors Benicio Lopez and Nirav Venkatesan.
 
 ## License
 

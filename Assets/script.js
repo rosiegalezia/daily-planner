@@ -97,7 +97,7 @@ for (var i = 0; i < blockCount; i++) {
                                         $("#block8").removeClass("present future").addClass("past")
                                         $("#block9").removeClass("past future").addClass("present")
                                     }
-                
+
 }
 
 // saving timeblock text in local storage
@@ -149,11 +149,11 @@ function getContent() {
 }
 getContent()
 
-function reset(){
+function reset() {
     for (i = 0; i < textAreaEl.length; i++) {
         localStorage.clear()
         textAreaEl[i].textContent = ""
-    }  
+    }
     location.reload(true)
 }
 
