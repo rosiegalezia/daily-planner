@@ -19,7 +19,6 @@ header {
   color: black;
   border-radius: 0;
   border-bottom: 5px solid #d3d3d3;
-  /* margin: 20px; */
   padding: 30px;
 }
 
@@ -29,22 +28,13 @@ header {
 
 .container {
   padding: 40px;
-  /* margin: 20px; */
 }
 
 .time-block {
   text-align: center;
   height: 80px;
   margin: 5px;
-  /* border-radius: 15px; */
-  /* padding: 45px; */
-  /* display: flex;
-  justify-content: center; */
 }
-
-/* .blockElement { */
-  /* background-color: #d3d3d3; */
-/* } */
 
 .row {
   white-space: pre-wrap;
@@ -66,7 +56,7 @@ header {
 }
 
 .past {
-  background-color: #d3d3d3;
+  background-color: #E2E2E2;
   color: white;
   border-radius: 15px;
 }
@@ -83,8 +73,28 @@ header {
   border-radius: 15px;
 }
 
+.resetBtn {
+  font-size: 15px;
+  display: flexbox;
+  justify-content: center;
+  /* align-items: center; */
+  border-radius: 8px;
+  color: white;
+  background-color: black;
+  opacity: 30%;
+  border: 0px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.resetBtn i:hover {
+  color: white;
+  background-color: black;
+  opacity: 20%;
+  transition: all 0.3s ease-in-out;
+}
+
 .saveBtn {
-  /* border-left: 1px solid black; */
   font-size: 35px;
   display: flex;
   justify-content: center;

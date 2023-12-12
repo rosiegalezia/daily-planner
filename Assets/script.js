@@ -9,7 +9,6 @@ var hourFive = dayjs("13:00:01")
 let blockCount = container.childElementCount;
 console.log(blockCount)
 
-
 // var // Sets timer to check time every second
 time = setInterval(function () {
 
@@ -24,16 +23,10 @@ time = setInterval(function () {
 
 }, 1000)
 
-
-// WHY DOES THIS NOT WORK????????????????
 // get the current time (hour block) via dayjs
-
 // parseInt to set the time to a number rather than string
 var currentHour = parseInt(dayjs().format("H"))
 console.log(currentHour)
-
-// manipulating currentHour for testing
-// var currentHour = 10
 
 //loop through all the blocks
 for (var i = 0; i < blockCount; i++) {
@@ -58,22 +51,67 @@ for (var i = 0; i < blockCount; i++) {
                     $("#block2").removeClass("present future").addClass("past")
                     $("#block3").removeClass("present future").addClass("past")
                     $("#block4").removeClass("past future").addClass("present")
-                }
-
+                } else
+                    if (currentHour === 13) {
+                        $("#block1").removeClass("present future").addClass("past")
+                        $("#block2").removeClass("present future").addClass("past")
+                        $("#block3").removeClass("present future").addClass("past")
+                        $("#block4").removeClass("present future").addClass("past")
+                        $("#block5").removeClass("past future").addClass("present")
+                    } else
+                        if (currentHour === 14) {
+                            $("#block1").removeClass("present future").addClass("past")
+                            $("#block2").removeClass("present future").addClass("past")
+                            $("#block3").removeClass("present future").addClass("past")
+                            $("#block4").removeClass("present future").addClass("past")
+                            $("#block5").removeClass("present future").addClass("past")
+                            $("#block6").removeClass("past future").addClass("present")
+                        } else
+                            if (currentHour === 15) {
+                                $("#block1").removeClass("present future").addClass("past")
+                                $("#block2").removeClass("present future").addClass("past")
+                                $("#block3").removeClass("present future").addClass("past")
+                                $("#block4").removeClass("present future").addClass("past")
+                                $("#block5").removeClass("present future").addClass("past")
+                                $("#block6").removeClass("present future").addClass("past")
+                                $("#block7").removeClass("past future").addClass("present")
+                            } else
+                                if (currentHour === 16) {
+                                    $("#block1").removeClass("present future").addClass("past")
+                                    $("#block2").removeClass("present future").addClass("past")
+                                    $("#block3").removeClass("present future").addClass("past")
+                                    $("#block4").removeClass("present future").addClass("past")
+                                    $("#block5").removeClass("present future").addClass("past")
+                                    $("#block6").removeClass("present future").addClass("past")
+                                    $("#block7").removeClass("present future").addClass("past")
+                                    $("#block8").removeClass("past future").addClass("present")
+                                } else
+                                    if (currentHour === 17) {
+                                        $("#block1").removeClass("present future").addClass("past")
+                                        $("#block2").removeClass("present future").addClass("past")
+                                        $("#block3").removeClass("present future").addClass("past")
+                                        $("#block4").removeClass("present future").addClass("past")
+                                        $("#block5").removeClass("present future").addClass("past")
+                                        $("#block6").removeClass("present future").addClass("past")
+                                        $("#block7").removeClass("present future").addClass("past")
+                                        $("#block8").removeClass("present future").addClass("past")
+                                        $("#block9").removeClass("past future").addClass("present")
+                                    }
+                
 }
 
-// -----------------------------------------------
 // saving timeblock text in local storage
 
 var saveBtn = $(".saveBtn")
 
+// event listener to save when save button clicked
 saveBtn.on("click", saveContent)
 
 function saveContent() {
     console.log($(this).siblings(".textArea").val())
 
     // 'this' refers to the element that called the function (i.e. save button)
-    // being applied to all the save buttons
+    // and is applied to all the save buttons
     // but the console.log will refer to the specific button I clicked
 
     // get the content for the block
@@ -88,14 +126,12 @@ function saveContent() {
 
 // then access it from local storage
 
+// makes an array of all of the textAreas
+var textAreaEl = $(".textArea")
+
 function getContent() {
 
-    // makes an array of all of the textAreas
-    var textAreaEl = $(".textArea")
-
-
-    // console.log(textAreaEl)
-
+    // loop over all the timeblocks and get the current value of the textarea
     for (i = 0; i < textAreaEl.length; i++) {
         console.log(textAreaEl[i])
 
@@ -103,7 +139,7 @@ function getContent() {
         // make a variable for key for each
         var keyEl = $(textAreaEl[i]).parent().attr("id")
         console.log(keyEl)
-        
+
         // call the content by its key
         localStorage.getItem(keyEl)
 
@@ -113,8 +149,13 @@ function getContent() {
 }
 getContent()
 
-
-// loop over all the timeblocks and get the current value of the textarea
+function reset(){
+    for (i = 0; i < textAreaEl.length; i++) {
+        localStorage.clear()
+        textAreaEl[i].textContent = ""
+    }  
+    location.reload(true)
+}
 
 // decide how you want to store the text for each hour in local storage
 // can either store each individual hour as its own key 
