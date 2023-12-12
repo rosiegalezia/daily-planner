@@ -27,11 +27,13 @@ time = setInterval(function () {
 
 // WHY DOES THIS NOT WORK????????????????
 // get the current time (hour block) via dayjs
-var currentHour = dayjs().format("H")
+
+// parseInt to set the time to a number rather than string
+var currentHour = parseInt(dayjs().format("H"))
 console.log(currentHour)
 
 // manipulating currentHour for testing
-// var currentHour = 9
+// var currentHour = 10
 
 //loop through all the blocks
 for (var i = 0; i < blockCount; i++) {
@@ -70,7 +72,6 @@ saveBtn.on("click", saveContent)
 function saveContent() {
     console.log($(this).siblings(".textArea").val())
 
-
     // 'this' refers to the element that called the function (i.e. save button)
     // being applied to all the save buttons
     // but the console.log will refer to the specific button I clicked
@@ -80,13 +81,37 @@ function saveContent() {
     // ID of the parent block, access via jquery attribute method
     var key = $(this).parent().attr("id")
 
+    // then save both to local storage using .setItem
     localStorage.setItem(key, text)
     console.log(localStorage)
-// then save both to local storage using .setItem
 }
 
 // then access it from local storage
 
+function getContent() {
+
+    // makes an array of all of the textAreas
+    var textAreaEl = $(".textArea")
+
+
+    // console.log(textAreaEl)
+
+    for (i = 0; i < textAreaEl.length; i++) {
+        console.log(textAreaEl[i])
+
+        // the key we want is the ID of the parent (ie the block number)
+        // make a variable for key for each
+        var keyEl = $(textAreaEl[i]).parent().attr("id")
+        console.log(keyEl)
+        
+        // call the content by its key
+        localStorage.getItem(keyEl)
+
+        // set the contents of textArea to the content from local storage
+        textAreaEl[i].textContent = localStorage.getItem(keyEl)
+    }
+}
+getContent()
 
 
 // loop over all the timeblocks and get the current value of the textarea
