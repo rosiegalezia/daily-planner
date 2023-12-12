@@ -1,17 +1,13 @@
 # daily-planner
-A daily planner created for the Week 7 challenge
-
+A daily planner created for the Week 7 challenge.
 
 ## Description
 
+This is a daily planner/organiser created to bring together content learnt in the bootcamp so far: Javascript, Web APIs and Third-party APIs.
 
-<!-- This is a JavaScript project utilising web APIs to create a timed quiz, storing the user's scores and initials to the local storage to create a scoreboard.
+Day.js is used to display the current date and time, and format the tasks on the planner based on whether they're past, present or future events.
 
-The quiz has four questions, showing the user if they were correct or incorrect before moving on to the next question.
-
-The scoreboard in the highscores.html is not complete as I was unable to display any text there towards the end, this is something to improve in the next iteration.
-
-The project was a good opportunity to practice the content learnt in Week 6 of the Front-End Web Development bootcamp. It was significantly more complex than previous assignments, and proved challenging, allowing me to learnt a lot about using multiple js files, accessing local storage and using JSON. -->
+JQuery is used to streamline the javascript and add additional functionality, and the user's tasks are saved to the local storage and retrieved when the page is refreshed.
 
 
 ## Installation
@@ -33,7 +29,7 @@ A screenshot of the site and its console log can be seen below:
 
 ## Credits
 
-Help was received from tutors Ashton Foston, Benicio Lopez, Nirav Venkatesan and Mark Utsby.
+Help was received from tutors Benicio Lopez, Nirav Venkatesan and Mark Utsby.
 
 ## License
 
